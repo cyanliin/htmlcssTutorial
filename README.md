@@ -46,8 +46,52 @@
 <a href="網址">要連結的內容</a>
 <a href="網址" target="_blank">開心分頁的連結</a>
 ```
+
+### div標籤
+每組 HTML div 標籤都是一個區塊元素，一次占用掉一整行的空間，
+每個區塊內還可以增加更小的區塊，有利於進行排版。
+```html
+<div>內容.....</div>
+```
+## Style
+用來設定 HTML 文件的樣式
+```css
+.style{ CSS樣式 }      
+(注意style 前的 "." 要記得打)
+```
+
 ## CSS 常用樣式
 ```css
-font-size: 10pt;  /* 文字大小(單位通常用pt) */
-color: red;       /* 文字顏色 (也可以用色碼) */ 
+color: red;                /* 文字顏色 (也可以用色碼) */ 
+font-size: 10pt;           /* 文字大小 (單位通常用pt) */
+font-family: sans-serif;   /* 文字字型 (無-襯線) */
+text-align: center;        /* 文字對齊 */
+font-weight: 100;          /* 文字粗細 (不需單位)*/
+/* normal、bold、100-900     預設、粗體、以數字設定（100為單位） */
+
+background-color: red;          /* 背景顏色 (也可以用色碼) */ 
+border-radius: 20pt;            /* 圓角 （值越大越圓）*/
+box-shadow: 0px 15px 40px red;  /* 陰影（x y 模糊程度 顏色）*/
+border: solid 1px red;          /* 邊框（樣式 粗細 顏色 ）*/
+/*solid、double、dotted、dashed    實線、雙實線、虛線、點點 */
+
+display：block;                  /* 顯示型態*/
+/*block、inline、                  區塊元素、內行元素、
+  inline-blockblock               以inline的方式呈現，但同時擁有block的屬性 */
+
+
+padding:                                  /* 內距 (數值寫法) */
+ 12px 0 0 0/ 10px 12px/ 0 12px 0/    12px;
+(上 右 下 左/ 上下  左右 / 上 左右 下/ 四邊同樣値;)
+
+padding-top/ right/ bottom/ left: 12px;   /* 內距 (標籤寫法) */
+      ( 上方/ 右方 /  下方 / 左方的內距 )
+      
+margin:                                   /* 外距 (數值寫法) */
+ 12px 0 0 0/ 10px 12px/ 0 12px 0/    12px;
+(上 右 下 左/ 上下  左右 / 上 左右 下/ 四邊同樣値;)
+                                        
+margin-top/ right/ bottom/ left: 12px;    /* 外距 (標籤寫法) */
+      ( 上方/ 右方 /  下方 / 左方的內距 )
+
 ```
