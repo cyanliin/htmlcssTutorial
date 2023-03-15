@@ -62,12 +62,12 @@
 
 ## CSS 常用樣式
 ```css
-color: red;                /* 文字顏色 (也可以用色碼) */ 
-font-size: 10pt;           /* 文字大小 (單位通常用pt) */
-font-family: sans-serif;   /* 文字字型 (無-襯線) */
-text-align: center;        /* 文字對齊 */
-font-weight: 100;          /* 文字粗細 (不需單位)*/
-/* normal、bold、100-900     預設、粗體、以數字設定（100為單位） */
+color: red;                     /* 文字顏色 (也可以用色碼) */ 
+font-size: 10pt;                /* 文字大小 (單位通常用pt) */
+font-family: sans-serif;        /* 文字字型 (無-襯線) */
+text-align: center;             /* 文字對齊 */
+font-weight: 100;               /* 文字粗細 (不需單位)*/
+/* normal、bold、100-900          預設、粗體、以數字設定（100為單位） */
 
 background-color: red;          /* 背景顏色 (也可以用色碼) */ 
 border-radius: 20pt;            /* 圓角 （值越大越圓）*/
