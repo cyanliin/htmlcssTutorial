@@ -140,3 +140,24 @@ margin-top/ right/ bottom/ left: 12px;    /* 外距 (標籤寫法) */
       ( 上方/ 右方 /  下方 / 左方的內距 )
 
 ```
+
+## 元素位置 Position
+```css
+relative                     /* 移改變，但原位置保留 */
+(搭配top/left參數 ) 
+
+absolute                     /* 位置被忽視，可自由在網頁上任何地方 */
+(自動向上尋找有position設定的元素跟著，寬度高度等細節需手動設定)
+
+fixed                        /* 位置浮動對齊螢幕 */
+(搭配top/bottom/left/right參數 ) 
+```
+
+
+## 引入共用CSS
+若HTML有相同CSS內容，可引入共用的CSS檔案
+```css
+先將CSS內容單獨存檔（存css檔）
+刪除整個 <style> 區
+改輸入 <link href="檔名.css" rel="stylesheet"> 
+```
