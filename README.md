@@ -178,13 +178,11 @@ position: relative;                        /* 微調位置 */
 top:0 px;                                  /* 搭配於:hover、:active狀態設定變數 */
                                            /* 也可搭配top/bottom/left/right參數 */
                                     
-
 transition:                                /* 漸變時間 [製造速度差的貝茲曲線參數] */
  0.2s[ cubic-bezier(.47,1.64,.41,.8 )]; 
 
 user-select: none;                         /* 讓文字無法反白 */
 （-webkit-user-select: none; ）             /* for Chrome、Safari 瀏覽器*/
-
 
 
 
