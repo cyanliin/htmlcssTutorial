@@ -82,82 +82,128 @@
 *** 注意名稱前的 "." 要記得打 ***
 ```
 
-## CSS 常用樣式
-### 文字類
-```css
-color: red;                     /* 文字顏色 (也可以用色碼) */ 
-font-size: 10pt;                /* 文字大小 (單位通常用pt) */
-font-family: sans-serif;        /* 文字字型 (無-襯線) */
-text-align: center;             /* 文字對齊 */
-font-weight: 100;               /* 文字粗細 (不需單位)*/
-(normal | bold | 100-900)          
-(  預設  | 粗體  |以數字設定（100為單位) )
-```
-### 裝飾類
-```css
-background-color: red;          /* 背景顏色 (也可以用色碼) */ 
-border-radius: 20pt;            /* 圓角 （值越大越圓）*/
-box-shadow: 0px 15px 40px red;  /* 陰影（x y 模糊程度 顏色）*/
-border: solid 1px red;          /* 邊框（樣式 粗細 顏色 ）*/
-/*solid、double、dotted、dashed    實線、雙實線、虛線、點點 */
-```
-
-### 排版類
-```css 
-display: block;                           /* 顯示型態 */
-block | inline ｜ inline-blockblock
-( 區塊 |  行內   | 以inline的方式呈現，但同時擁有block的屬性 ）                  
-
-display: flex;                            /* 隨著網頁縮放改變比例 */
-(需先設成flex，底下語法才可使用)
-
-justify-content:                          /* 水平對齊 */
-flex-start | flex-end | center | space-between
-(   置前    ｜    置後  ｜  置中  ｜  均分  )
-
-align-item:                               /* 垂直對齊 */
-flex-start | flex-end | center 
-(   置前    ｜    置後  ｜  置中   )
-
-flex-wrap:                                /* 換行設定 */
- nowrap | wrap | wrap-reverse;
- (預設值 ｜ 換行 ｜ 換行，且行順序反轉 )
-
-
-
-padding:                                  /* 內距 (數值寫法) */
- 12px 0 0 0/ 10px 12px/ 0 12px 0/    12px;
-(上 右 下 左/ 上下  左右 / 上 左右 下/ 四邊同樣値;)
-
-padding-top/ right/ bottom/ left: 12px;   /* 內距 (標籤寫法) */
-      ( 上方/ 右方 /  下方 / 左方的內距 )
-      
-margin:                                   /* 外距 (數值寫法) */
- 12px 0 0 0/ 10px 12px/ 0 12px 0/    12px;
-(上 右 下 左/ 上下  左右 / 上 左右 下/ 四邊同樣値;)
-                                        
-margin-top/ right/ bottom/ left: 12px;    /* 外距 (標籤寫法) */
-      ( 上方/ 右方 /  下方 / 左方的內距 )
-
-```
-
-## 元素位置 Position
-```css
-relative                     /* 移改變，但原位置保留 */
-(搭配top/left參數 ) 
-
-absolute                     /* 位置被忽視，可自由在網頁上任何地方 */
-(自動向上尋找有position設定的元素跟著，寬度高度等細節需手動設定)
-
-fixed                        /* 位置浮動對齊螢幕 */
-(搭配top/bottom/left/right參數 ) 
-```
-
-
-## 引入共用CSS
+## 引入共用 CSS
 若HTML有相同CSS內容，可引入共用的CSS檔案
 ```css
 先將CSS內容單獨存檔（存css檔）
 刪除整個 <style> 區
 改輸入 <link href="檔名.css" rel="stylesheet"> 
 ```
+
+
+
+# CSS 常用樣式
+### 文字類
+```css
+color: red;                                  /* 文字顏色 (也可以用色碼) */ 
+font-size: 10pt;                             /* 文字大小 (單位通常用pt) */
+font-family: sans-serif;                     /* 文字字型 (無-襯線) */
+text-align: center;                          /* 文字對齊 */
+font-weight: 100;                            /* 文字粗細 (不需單位)*/
+(normal | bold | 100-900)          
+(  預設  | 粗體  |以數字設定（100為單位) 
+```
+### 裝飾類
+```css
+background-color: red;                       /* 背景顏色 (也可以用色碼) */ 
+border-radius: 20pt;                         /* 圓角 （值越大越圓）*/
+box-shadow: 0px 15px 40px red;               /* 陰影（x y 模糊程度 顏色）*/
+border: solid 1px red;                       /* 邊框（樣式 粗細 顏色 ）*/
+/*solid、double、dotted、dashed    實線、雙實線、虛線、點點 */
+```
+
+### 排版類
+```css 
+display: block;                              /* 顯示型態 */
+block | inline ｜ inline-blockblock
+( 區塊 |  行內   | 以inline的方式呈現，但同時擁有block的屬性）                  
+
+display: flex;                               /* 隨著網頁縮放改變比例 */
+(需先設成flex，底下語法才可使用)
+
+justify-content:                             /* 水平對齊 */
+flex-start | flex-end | center | space-between
+(   置前    ｜    置後  ｜  置中  ｜  均分  )
+
+align-item:                                  /* 垂直對齊 */
+flex-start | flex-end | center 
+(   置前    ｜    置後  ｜  置中   )
+
+flex-wrap:                                   /* 換行設定 */
+ nowrap | wrap | wrap-reverse;
+ (預設值 ｜ 換行 ｜ 換行，且行順序反轉)
+
+
+
+padding:                                     /* 內距 (數值寫法) */
+ 12px 0 0 0/ 10px 12px/ 0 12px 0/    12px;
+(上 右 下 左/ 上下  左右 / 上 左右 下/ 四邊同樣値;)
+
+padding-top/ right/ bottom/ left: 12px;      /* 內距 (標籤寫法) */
+      ( 上方/ 右方 /  下方 / 左方的內距 )
+      
+margin:                                      /* 外距 (數值寫法) */
+ 12px 0 0 0/ 10px 12px/ 0 12px 0/    12px;
+(上 右 下 左/ 上下  左右 / 上 左右 下/ 四邊同樣値;)
+                                        
+margin-top/ right/ bottom/ left: 12px;       /* 外距 (標籤寫法) */
+      ( 上方/ 右方 /  下方 / 左方的內距 )
+
+```
+
+## 位置 Position
+```css
+relative                                  /* 位移改變，但原位置保留，適合微調時使用*/
+(搭配top/left參數) 
+
+absolute                                  /* 位置被忽視，可自由在網頁上任何地方 */
+(自動向上尋找有position設定的元素跟著，寬度高度等細節需手動設定)
+
+fixed                                     /* 位置浮動對齊螢幕，不受捲軸影響 */
+(搭配top/bottom/left/right參數) 
+```
+## 按鈕 CSS
+
+.button ＝ 一般狀態下的顯示 
+
+.button: hover ＝ 游標移入時改動的顯示 
+
+.button: active ＝ 游標按下時改動的顯示 
+```css
+* 加在一般狀態下 *
+width: 200px;                              /* 滑鼠移入時按鈕變寬 */
+cursor: pointer;                           /* 滑鼠移入時變成手指游標 */
+
+position: relative;                        /* 微調位置 */                             
+top:0 px;                                  /* 搭配於:hover、:active狀態設定變數 */
+                                           /* 也可搭配top/bottom/left/right參數 */
+                                    
+
+transition:                                /* 漸變時間 [製造速度差的貝茲曲線參數] */
+ 0.2s[ cubic-bezier(.47,1.64,.41,.8 )]; 
+
+user-select: none;                         /* 讓文字無法反白 */
+（-webkit-user-select: none; ）             /* for Chrome、Safari 瀏覽器*/
+
+
+
+
+* 加在:hover 滑鼠移入時的狀態改變 *
+color: white;                              /* 改變的字體顏色 */
+background-color: blue;                    /* 改變的背景顏色 */
+top: -5px;                                 /* 位置上移、讓使用者發現可點擊 */
+(也可搭配top/bottom/left/right參數) 
+
+box-shadow: 2px 5px 12px black;            /* 產生陰影、增加按鈕立體感 */
+
+
+
+* 加在:active 游標按下時的狀態改變 *
+top:0px;                                   /* 位置下移、製造點按效果 */
+
+background-color: blue;                    /* 改變背景顏色、顯示點按成功 */
+ 
+```
+
+
+
