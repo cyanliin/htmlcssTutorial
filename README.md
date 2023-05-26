@@ -38,7 +38,7 @@
 ### 圖片 img
 (不用結束標籤)
 ```html
-<img src="圖片檔名">
+<img src="圖片檔名 or 圖片網址 ">
 ```
 
 ### 連結 a
@@ -162,6 +162,81 @@ absolute                                  /* 位置被忽視，可自由在網�
 fixed                                     /* 位置浮動對齊螢幕，不受捲軸影響 */
 (搭配top/bottom/left/right參數) 
 ```
+
+## 排序
+### < ul > 無編號清單
+```css
+<ul>
+    <li> Amy </li>
+    <li> Judy </li>
+    <li> Grace </li>
+</ul>
+
+顯示:
+* Amy
+* Judy
+* Grace
+```
+### < ol > 有編號清單
+
+type="1"：這是預設值，代表用阿拉伯數目（1, 2 ,3 ...）字編號。
+type="A"：大寫英文字母。
+
+type="a"：小寫英文字母。
+
+type="I"：大寫羅馬數字（I, II, III, ...）。
+
+type="i"：小寫羅馬數字（i, ii, iii, ...）。
+```css
+<ol>
+    <li> Amy </li>
+    <li> Judy </li>
+    <li> Grace </li>
+</ol>
+
+顯示:
+1. Amy
+2. Judy
+3. Grace
+
+<ol type ="a">
+    <li> Amy </li>
+    <li> Judy </li>
+    <li> Grace </li>
+</ol>
+
+顯示:
+a. Amy
+b. Judy
+c. Grace
+```
+## 表格 Table
+tr 搭配 td
+
+```html
+<table border(匡線) =1 >
+    <tr>
+        <td> 1 </td>
+        <td> 2 </td>
+        <td> 3 </td>
+    </tr>
+    <tr>
+        <td> 4 </td>
+        <td> 5 </td>
+        <td> 6 </td>
+    </tr>
+</table>
+
+顯示:
+_______
+|1|2|3|
+|-|-|-|
+|4|5|6|
+|_|_|_|
+
+```
+
+
 ## 按鈕 CSS
 
 .button ＝ 一般狀態下的顯示 
@@ -197,7 +272,7 @@ box-shadow: 2px 5px 12px black;            /* 產生陰影、增加按鈕立體�
 
 
 * 加在:active 游標按下時的狀態改變 *
-top:0px;                                   /* 位置下移、製造點按效果 */
+top: 0px;                                   /* 位置下移、製造點按效果 */
 
 background-color: blue;                    /* 改變背景顏色、顯示點按成功 */
  
@@ -207,9 +282,9 @@ background-color: blue;                    /* 改變背景顏色、顯示點按�
 ##  方法 1
 置中文字
 ```css
-max-width                                 /*限制最大寬度 */
+max-width: 1000px;                                /*限制最大寬度 */
 
-margin:  0 auto o auto                    /*div置中 */
+margin:  0 auto o auto;                    /*div置中 */
 /* text-align: center 僅文字置中 */
 ```
 ##  方法 2
